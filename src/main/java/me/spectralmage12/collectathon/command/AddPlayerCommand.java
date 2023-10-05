@@ -7,6 +7,7 @@ import me.spectralmage12.collectathon.Collectathon;
 import me.spectralmage12.collectathon.GameManager;
 import net.md_5.bungee.api.ChatColor;
 import org.bukkit.Bukkit;
+import org.bukkit.entity.Player;
 
 @SuppressWarnings("ConstantConditions")
 public class AddPlayerCommand extends CustomCommand {
@@ -17,8 +18,9 @@ public class AddPlayerCommand extends CustomCommand {
                 .withPermission(CommandPermission.OP)
                 .executes((sender, args) -> {
                     String player = (String) args.get(0);
+                    Player playerObject = Bukkit.getPlayer(player);
 
-                    if(Bukkit.getPlayer(player) == null) {
+                    if(!Bukkit.getOnlinePlayers().contains(playerObject)) {
                         sender.sendMessage(ChatColor.RED + "That player isn't online right now!");
                         return;
                     }
