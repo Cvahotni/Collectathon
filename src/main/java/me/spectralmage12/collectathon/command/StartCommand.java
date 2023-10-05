@@ -12,6 +12,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.World;
 
+@SuppressWarnings("ConstantConditions")
 public class StartCommand extends CustomCommand {
     @Override
     public void register(Collectathon main) {
@@ -20,8 +21,8 @@ public class StartCommand extends CustomCommand {
                 .withArguments(new IntegerArgument("border"))
                 .withPermission(CommandPermission.OP)
                 .executes((sender, args) -> {
-                    String collector = (String) args[0];
-                    int amount = (int) args[1];
+                    String collector = (String) args.get(0);
+                    int amount = (int) args.get(1);
 
                     GameManager.setMaxSize(amount);
                     World world = Bukkit.getWorld("world");

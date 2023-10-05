@@ -7,6 +7,7 @@ import me.spectralmage12.collectathon.Collectathon;
 import me.spectralmage12.collectathon.handler.GameStateHandler;
 import net.md_5.bungee.api.ChatColor;
 
+@SuppressWarnings("ConstantConditions")
 public class GameStateSetCommand extends CustomCommand {
     @Override
     public void register(Collectathon main) {
@@ -14,7 +15,7 @@ public class GameStateSetCommand extends CustomCommand {
                 .withArguments(new GreedyStringArgument("state"))
                 .withPermission(CommandPermission.OP)
                 .executes((sender, args) -> {
-                    String state = (String) args[0];
+                    String state = (String) args.get(0);
                     GameStateHandler.setCurrentListener(main, state);
 
                     sender.sendMessage(ChatColor.WHITE + "Set the current state to: " + state + ".");

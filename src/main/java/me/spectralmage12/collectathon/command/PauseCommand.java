@@ -7,6 +7,7 @@ import me.spectralmage12.collectathon.GameManager;
 import me.spectralmage12.collectathon.handler.GameStateHandler;
 import net.md_5.bungee.api.ChatColor;
 
+@SuppressWarnings("ConstantConditions")
 public class PauseCommand extends CustomCommand {
     @Override
     public void register(Collectathon main) {
