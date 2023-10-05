@@ -18,7 +18,7 @@ public class AddPlayerCommand extends CustomCommand {
                 .withPermission(CommandPermission.OP)
                 .executes((sender, args) -> {
                     String player = (String) args.get(0);
-                    Player playerObject = Bukkit.getPlayer(player);
+                    Player playerObject = Bukkit.getPlayerExact(player);
 
                     if(!Bukkit.getOnlinePlayers().contains(playerObject)) {
                         sender.sendMessage(ChatColor.RED + "That player isn't online right now!");
