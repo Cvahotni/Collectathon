@@ -31,22 +31,13 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
-                <version>3.2.4</version>
+                <version>3.4.1</version>
                 <executions>
                     <execution>
                         <phase>package</phase>
                         <goals>
                             <goal>shade</goal>
                         </goals>
-                        <configuration>
-                            <minimizeJar>true</minimizeJar>
-                            <relocations>
-                                <relocation>
-                                    <pattern>dev.jorel.commandapi</pattern>
-                                    <shadedPattern>my.custom.package.commandapi</shadedPattern>
-                                </relocation>
-                            </relocations>
-                        </configuration>
                     </execution>
                 </executions>
             </plugin>
@@ -80,11 +71,10 @@
         </dependency>
 
         <dependency>
-            <groupId>de.jorel</groupId>
-            <artifactId>commandapi</artifactId>
-            <version>8.8.0</version>
-            <scope>system</scope>
-            <systemPath>${basedir}/lib/commandapi.jar</systemPath>
+            <groupId>dev.jorel</groupId>
+            <artifactId>commandapi-bukkit-core</artifactId>
+            <version>9.2.0</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 </project>
