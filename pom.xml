@@ -64,6 +64,7 @@
             <id>spigotmc-repo</id>
             <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
         </repository>
+
         <repository>
             <id>sonatype</id>
             <url>https://oss.sonatype.org/content/groups/public/</url>
@@ -83,7 +84,7 @@
             <artifactId>commandapi</artifactId>
             <version>8.8.0</version>
             <scope>system</scope>
-            <systemPath>/home/spectral/Documents/Plugin Projects/2023/Collectathon/lib/CommandAPI-8.8.0.jar</systemPath>
+            <systemPath>${basedir}/lib/commandapi.jar</systemPath>
         </dependency>
     </dependencies>
 </project>
