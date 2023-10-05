@@ -1,0 +1,6 @@
+name: Collectathon
+version: '${project.version}'
+main: me.spectralmage12.collectathon.Collectathon
+api-version: 1.19
+authors: [SpectralMage12]
+description: Manhunt, but you have to collect stuff!
