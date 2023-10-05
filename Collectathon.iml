@@ -34,7 +34,7 @@
     <orderEntry type="module-library">
       <library name="Maven: de.jorel:commandapi:8.8.0">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/lib/CommandAPI-8.8.0.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/commandapi.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
